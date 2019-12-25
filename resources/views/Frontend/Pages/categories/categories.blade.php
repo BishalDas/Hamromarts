@@ -144,7 +144,7 @@
 	<div class="row">
 		<div class="col-md-3">
 			<img src="{{URL::to('frontend/img/electronics.jpg')}}">
-			<img src="{{URL::to('frontend/img/electronics.jpg')}}">
+			<!-- <img src="{{URL::to('frontend/img/electronics.jpg')}}"> -->
 		</div>
 	<div class="col-md-9 bg-white">
 		<div class="row bg-light mb-2">
