@@ -20,8 +20,8 @@ class CreateProductsTable extends Migration
             $table->string('subcategory');
             $table->string('subsubcategory');
             $table->integer('price');
-            $table->boolean('image');
-            $table->string('description');
+            $table->string('image');
+            $table->string('description')->nullable();
             $table->integer('phone');
             $table->integer('uid');
             $table->timestamps();

@@ -234,7 +234,7 @@
 
 <!--Main Containt-->
 <div class="container">
-<div class="card">
+{{--<div class="card">
 <div class="card-header">
     <a href="" class="link" style="font-size: 20px">Electrical & Electronics</a> &nbsp
     <a href="{{route('food_and_beverage')}}" class="link" style="font-size: 10px">View all></a>
@@ -283,167 +283,74 @@
         </div>
     </div>
 </div>
-</div>
-<br>
-<br>
+</div>--}}
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 card-header">
+                    <a href="{{route('categories/viewall')}}" class="link" style="font-size: 20px">Food & Beverage</a> &nbsp
+                    <a href="{{route('categories/viewall')}}" class="link" style="font-size: 10px">View all></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 card">
+                    <img class="card-img-top" src="{{URL::to('frontend/img/divine.jpg')}}" alt="Card image">
+                    <h6>Divine Wine</h6>
+                </div>
+                <div class="col-sm-2 card">
+                    <img class="card-img-top" src="{{URL::to('frontend/img/cashewnut.jpeg')}}" alt="Card image">
+                    <h6>Cashew Nut</h6>
+                </div>
+                <div class="col-sm-2 card">
+                    <img class="card-img-top" src="{{URL::to('frontend/img/chicken.jpg')}}" alt="Card image">
+                    <h6>Chicken</h6>
+                </div>
+                <div class="col-sm-2 card">
+                    <img class="card-img-top" src="{{URL::to('frontend/img/milk.jpeg')}}" alt="Card image" style="height: auto">
+                    <h6>Milk</h6>
+                </div>
+                <div class="col-sm-2 card">
+                    <img class="card-img-top" src="{{URL::to('frontend/img/egg.jpg')}}" alt="Card image">
+                    <h6>Eggs</h6>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 <div class="container-fluid">
     <div class="container">
         <div class="row">
             <div class="col-12 card-header">
-                <a href="" class="link" style="font-size: 20px">Industrial Plants and Machinery</a> &nbsp
-                <a href="{{route('categories/viewall')}}" class="link" style="font-size: 10px">View all></a>
+                <a href="{{route('food_and_beverage/viewall')}}" class="link" style="font-size: 20px">Food & Beverage</a> &nbsp
+                <a href="{{route('food_and_beverage/viewall')}}" class="link" style="font-size: 10px">View all></a>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-2 card">
-                <img class="card-img-top" src="{{URL::to('frontend/img/electronics.jpg')}}" alt="Card image">
-                <h6>Oven</h6>
+                <img class="card-img-top" src="{{URL::to('frontend/img/divine.jpg')}}" alt="Card image">
+                <h6>Divine Wine</h6>
             </div>
             <div class="col-sm-2 card">
-                <img class="card-img-top" src="{{URL::to('frontend/img/electronics.jpg')}}" alt="Card image">
-                <h6>Oven</h6>
+                <img class="card-img-top" src="{{URL::to('frontend/img/cashewnut.jpeg')}}" alt="Card image">
+                <h6>Cashew Nut</h6>
             </div>
             <div class="col-sm-2 card">
-                <img class="card-img-top" src="{{URL::to('frontend/img/electronics.jpg')}}" alt="Card image">
-                <h6>Oven</h6>
+                <img class="card-img-top" src="{{URL::to('frontend/img/chicken.jpg')}}" alt="Card image">
+                <h6>Chicken</h6>
             </div>
             <div class="col-sm-2 card">
-                <img class="card-img-top" src="{{URL::to('frontend/img/electronics.jpg')}}" alt="Card image">
-                <h6>Oven</h6>
+                <img class="card-img-top" src="{{URL::to('frontend/img/milk.jpeg')}}" alt="Card image" style="height: auto">
+                <h6>Milk</h6>
             </div>
             <div class="col-sm-2 card">
-                <img class="card-img-top" src="{{URL::to('frontend/img/electronics.jpg')}}" alt="Card image">
-                <h6>Oven</h6>
+                <img class="card-img-top" src="{{URL::to('frontend/img/egg.jpg')}}" alt="Card image">
+                <h6>Eggs</h6>
 
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div>
-                <img src="images/foods/snickers.jpg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                <h2>Desarrollo Web</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#" class="btn btn-primary" title="Enlace">Leer más »</a>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div>
-                <img src="images/wears/sneaker.jpg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                <h2>Alojamiento Web</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#" class="btn btn-primary" title="Enlace">Leer más »</a>
             </div>
         </div>
     </div>
 </div>
-
-
-{{--<div class="card">
-    <div class="card-header">
-        <a href="" class="link" style="font-size: 20px">Foods & Beverages</a> &nbsp
-        <a href="" class="link" style="font-size: 10px">View all></a>
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="hello">
-                        <img src="frontend/img/core-img/salad.png" alt="Avatar" class="image" style="position: center">
-                        <div class="middle">
-                            <a href="https://www.w3schools.com/html/html_links.asp">link text</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="hello">
-                        <img src="frontend/img/core-img/salad.png" alt="Avatar" class="image" style="position: center">
-                        <div class="middle">
-                            <a href="https://www.w3schools.com/html/html_links.asp">link text</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="hello">
-                        <img src="frontend/img/core-img/salad.png" alt="Avatar" class="image" style="position: center">
-                        <div class="middle">
-                            <a href="https://www.w3schools.com/html/html_links.asp">link text</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="hello">
-                        <img src="frontend/img/core-img/salad.png" alt="Avatar" class="image" style="position: center">
-                        <div class="middle">
-                            <a href="https://www.w3schools.com/html/html_links.asp">link text</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>--}}
-<br>
-<br>
-
-{{--<div class="card">
-    <div class="card-header">
-        <a href="" class="link" style="font-size: 20px">Fashion wears</a> &nbsp
-        <a href="" class="link" style="font-size: 10px">View all></a>
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="hello">
-                        <img src="frontend/img/core-img/salad.png" alt="Avatar" class="image" style="position: center">
-                        <div class="middle">
-                            <a href="https://www.w3schools.com/html/html_links.asp">link text</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="hello">
-                        <img src="frontend/img/core-img/salad.png" alt="Avatar" class="image" style="position: center">
-                        <div class="middle">
-                            <a href="https://www.w3schools.com/html/html_links.asp">link text</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="hello">
-                        <img src="frontend/img/core-img/salad.png" alt="Avatar" class="image" style="position: center">
-                        <div class="middle">
-                            <a href="https://www.w3schools.com/html/html_links.asp">link text</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="hello">
-                        <img src="frontend/img/core-img/salad.png" alt="Avatar" class="image" style="position: center">
-                        <div class="middle">
-                            <a href="https://www.w3schools.com/html/html_links.asp">link text</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>--}}
 </div>
 <!-- ##### Footer Area Start ##### -->
 <footer class="footer-area">

@@ -14,4 +14,9 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
+    public function subsubcategory()
+    {
+        return $this->belongsTo('App\Models\Subsubcategory');
+    }
 }

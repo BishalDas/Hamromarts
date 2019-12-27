@@ -95,13 +95,14 @@
                                                 <td>{{$product->subcategory}}</td>
                                                 <td>{{$product->subsubcategory}}</td>
                                                 <td>{{$product->price}}</td>
-                                                <td>{{$product->image}}</td>
+                                                <td><img src="{{url('backend/images/products/'.$product->image)}}" width="30" alt=""></td>
                                                 <td>{{$product->description}}</td>
                                                 <td>{{$product->phone}}</td>
                                                 <td>{{$product->uid}}</td>
                                                <td>{{$product->created_at}}</td>
+                                                <td> <a class="btn btn-info btn-sm btn-xs" href="{{ route('product-details',$product->id) }}">Show</a></td>
                                                 <td>
-                                                    <a href="" class="btn btn-success btn-sm btn-xs">
+                                                    <a href="{{route('product-edit',$product->id)}}" class="btn btn-success btn-sm btn-xs">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
                                                 <td>
@@ -119,7 +120,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 text-center">
-                                        {{-- {{$key->links()}}--}}
+                                        {{$products->links()}}
                                     </div>
                                 </div>
                             </class>

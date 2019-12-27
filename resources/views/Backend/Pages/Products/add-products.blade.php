@@ -57,14 +57,14 @@
                                 <form action="{{route('add-product')}}" method="post" enctype="multipart/form-data">
                                     {{csrf_field()}}
                                     <div class="form-group form-group-sm">
-                                        <lable for="proname">Product Name</lable>
-                                        <input type="text" name="pname" id="pname" class="form-control" value="{{old('name')}}"
+                                        <lable for="name">Product Name</lable>
+                                        <input type="text" name="name" id="pname" class="form-control" value="{{old('name')}}"
                                                placeholder="Enter product">
                                         <a href="" style="color:red">{{$errors->first('name')}}</a>
                                     </div>
                                     <div class="form-group form-group-sm">
                                         <label for="category">Category</label>
-                                        <select id="category" name="category_id" class="form-control">
+                                        <select id="category" name="category" class="form-control">
                                             <option value="" selected disabled>Select</option>
                                             @foreach($categories as $key => $cat)
                                                 <option value="{{$key}}"> {{$cat}}</option>
@@ -91,6 +91,10 @@
                                         <lable for="image">Product Picture</lable>
                                         <input type="file" name="upload" id="image" class="form-control">
                                         <a href="" style="color:red">{{$errors->first('upload')}}</a>
+                                    </div>
+                                    <div class="form-group form-group-sm">
+                                        <lable for="phone">Phone</lable>
+                                        <input type="text" name="phone">
                                     </div>
 
                                     <div class="form-group form-group-sm">

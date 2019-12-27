@@ -40,6 +40,8 @@ Route::group(['namespace'=>'Frontend'],function(){
 });
 // Viewall
     Route::get('/categories/viewall',['as'=>'categories/viewall','uses'=>'PageController@categoriesviewall']);
+Route::get('/food_and_beverage/viewall',['as'=>'food_and_beverage/viewall','uses'=>'PageController@foodviewall']);
+
 
 
 /*---------For Admin Log in ---------*/
@@ -50,11 +52,6 @@ Route::group(['namespace'=>'Backend'],function() {
 //--------Route added for Backend -------------
 Route::group(['namespace'=>'Backend','prefix'=>'admin','middleware'=>'auth:admin'],function(){
     Route::any('/','DashboardController@index')->name('admin-dashboard');
-    Route::group(['prefix'=>'admin-users'],function() {
-        Route::any('products', 'ProductController@index')->name('products');
-        Route::get('product-search', 'ProductController@action')->name('product-search');
-        Route::any('delete/{id}', 'ProductController@destroy')->name('delete');
-    });
 
     Route::group(['prefix'=>'admin-users'],function(){
         Route::any('add-product','ProductController@add')->name('add-product');
@@ -73,6 +70,32 @@ Route::group(['namespace'=>'Backend','prefix'=>'admin','middleware'=>'auth:admin
         Route::any('changePassword','PasswordController@showChangePasswordForm')->name('changePassword');
         Route::any('changePasswordsubmit','PasswordController@changePassword')->name('changepasswordform');
       //  Route::any('password','@index')->name('password');
+    });
+
+    Route::group(['prefix'=>'category'],function(){
+        Route::any('show-categories','Categorycontroller@show')->name('show-categories');
+        Route::any('add-categories','Categorycontroller@add')->name('add-categories');
+        Route::any('update-status','Categorycontroller@status')->name('update-status');
+        Route::any('delete/{id}','Categorycontroller@delete')->name('delete');
+        Route::any('edit-cat','Categorycontroller@edit')->name('edit-cat');
+    });
+
+    Route::group(['prefix'=>'product'],function(){
+        Route::any('products', 'ProductController@index')->name('products');
+        Route::any('show-products','productcontroller@index')->name('show-products');
+        Route::any('add-product','ProductController@add')->name('add-product');
+        Route::get('admin_category_list/{id}', 'ProductController@getSubCategoryList');
+        Route::get('admin_subcategory_list/{id}', 'ProductController@getSubsubCategoryList');
+        Route::any('product-details/{criteria?}','ProductController@details')->name('product-details');
+        Route::any('product-edit/{id}','ProductController@edit')->name('product-edit');
+        Route::any('product-update/{id}','ProductController@update')->name('product-update');
+
+        Route::get('product-search', 'ProductController@action')->name('product-search');
+        Route::any('delete/{id}', 'ProductController@destroy')->name('delete');
+
+        //Route::any('add-product','productcontroller@add')->name('add-product');
+
+        Route::any('deletepro/{id}','productcontroller@delete')->name('deletepro');
     });
    Route::any('admin-logout','AdminLoginController@logout')->name('admin-logout');
 });

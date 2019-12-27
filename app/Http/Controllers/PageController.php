@@ -10,4 +10,9 @@ class PageController extends Controller
     {
         return view('Frontend.Pages.categories.categories');
     }
+
+    public function Foodviewall()
+    {
+        return view('Frontend.Pages.subcategory.Foods_and_beverage');
+    }
 }
